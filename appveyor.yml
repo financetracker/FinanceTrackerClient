@@ -1,8 +1,5 @@
 version: 1.0.0.{build}
 
-build:
-  verbosity: minimal
-
 environment:
   nodejs_version: "6"
 
