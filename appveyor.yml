@@ -1,10 +1,12 @@
 version: 1.0.0.{build}
 
 environment:
+  application_path: ".\src\finance-tracker-app\"
   nodejs_version: "6"
 
 install:
   - ps: Install-Product node $env:nodejs_version
+  - cd $env:application_path
   - npm install
 
 build: off
