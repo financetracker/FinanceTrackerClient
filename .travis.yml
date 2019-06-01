@@ -1,11 +1,19 @@
 language: node_js
 node_js:
-  - "node"
+- node
 
-install: 
-  - cd ./src/finance-tracker-app
-  - yarn
-  
+install:
+- cd ./src/finance-tracker-app
+- yarn
+
 script:
-  - yarn test
-  - yarn build
+- yarn test
+- yarn build
+
+deploy:
+  provider: releases
+  api_key:
+    secure: fLpIZf94hhuz8VThJiUTZD+3c2vGjNQ/muCtdCkZcr/eOd9rtkS+UzsEEDsN+FKV6NoscY7hWk+lxpKNDnPk5GanYE3E3mxgDcXeCS4TFUKVy+MV3yLR+hTUrR+xtHLD1TUfIrG8bStDh4EZFqS5WGJo52aMPSsJOW/ip3XlTQcHPTnv6uVOUrRyYivv10wu2j1avB6QrAYJoD6nMQVl0AKT/k+cmjvEOZBBS4vBRjL4t4KIAqI15WbRF/quXubThc1CkPY4qMDOMM6XqR6Ft6HetjyCX+ibB1TzvxFQmo7dsu8S658+3TCw4Z/bPkad3gub1SX5GCBoNAmxHWBbMfTGY5PUYFnvcznNTnl7gQTgbRYvrCwpjkFtTUTTJcq6rTRzTDcNMcIxir8O775n3W1Q3zbZ8tgetAJ9AEyl1IHIfyfqKHtLufAIjvsth0x1k9h1BWbMPfQHSZn5ZiqaY4i5uguAyhp/lYQjiK4xyN+H7GCPmnbPARidxZ883AmLfPmR03XrmwkSaH/vptHaywas/N9ZVDnWQj0a7fY9f1JogT/8LWkRzZ9OYt2xN442JutMTD5WZfgF4u0i6Tkg8Z49QjDGuj737PGOJrfliyba61tUqz3TlBNPYzHk9B4Xcf0FdSq57P/22UT2jrvu0SO/5pMSj0eC+vj1A5QCaLM=
+  local_dir: build
+  on:
+    tags: true
