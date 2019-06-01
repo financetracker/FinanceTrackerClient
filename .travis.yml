@@ -5,3 +5,7 @@ node_js:
 install: 
   - cd ./src/finance-tracker-app
   - yarn
+  
+script:
+  - yarn test
+  - yarn build
